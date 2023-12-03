@@ -1,21 +1,19 @@
 def main():
-    file = "1/input.txt"
-    input = get_input(file)
+    file = "input.txt"
+    problem_input = get_input(file)
 
-    print("Answer:", get_calibration_value(input))
+    print("Answer:", get_calibration_value(problem_input))
 
 
 def get_input(file):
     with open(file, 'r') as f:
-        input = f.read().split('\n')
-
-    return input
+        return f.read().split('\n')
 
 
-def get_calibration_value(input):
+def get_calibration_value(problem_input):
     sum_of_values = 0
 
-    for word in input:
+    for word in problem_input:
         sum_of_values += get_number_from_words(word)
 
     return sum_of_values  
@@ -33,5 +31,6 @@ def get_number_from_words(word):
         number = number[0] + number[-1]
 
     return int(number)
+
 
 main()
