@@ -1,5 +1,5 @@
 def main():
-    file = "input.txt"
+    file = "../../resources/input.txt"
     problem_input = get_input(file)
 
     print("Answer:", get_calibration_value(problem_input))
